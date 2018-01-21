@@ -1,0 +1,13 @@
+---
+# Playbook to install mysql
+
+- hosts: dbservers
+  become: yes
+
+  tasks:
+    - name: Installing mysql server
+      apt: name=mysql-server state=present update_cache=true
+
+    - name: Starting mysql service
+      service: name=mysql state=started
+
