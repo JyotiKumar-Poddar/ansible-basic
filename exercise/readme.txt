@@ -25,6 +25,9 @@ ansible webservers -i inventory_prod.yml -a "/bin/echo hello sammy"
 to install apache web server
 ansible webservers -i inventory_prod.yml -m apt -a "name=apache2 state=present update_cache=true" --become
 
+Stopping apache2 service
+ansible webservers -i inventory_prod.yml -m service -a "name=apache2 state=stopped" --become
+
 installing mysql
 ansible dbbservers -i inventory_prod.yml -m apt -a "name=mysql-server state=present update_cache=true" --become
 

@@ -1,0 +1,23 @@
+---
+# This is the play book for installing application software's
+- hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Installing apache2 http server
+      apt: name=apache2 state=present update_cache=true
+
+    - name: Starting apache service
+      service: name=apache2 state=stopped
+
+- hosts: dbservers
+  become: yes
+
+  tasks:
+    - name: Installing mysql server
+      apt: name=mysql-server state=present update_cache=true
+
+    - name: Starting mysql service
+      service: name=mysql state=started
+
+

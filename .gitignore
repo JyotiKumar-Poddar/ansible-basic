@@ -6,6 +6,9 @@
 # Log file
 *.log
 .vagrant
+*.iml
+idea
+
 
 # BlueJ files
 *.ctxt
