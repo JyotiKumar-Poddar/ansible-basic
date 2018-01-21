@@ -11,3 +11,8 @@
     - name: Starting mysql service
       service: name=mysql state=started
 
+    - name: result of shell task to store in variable username
+      shell: /usr/bin/whoami  #result of shell task to store in variable username
+      register: username
+
+    - debug: msg = "The host is {{username}} during execution"
