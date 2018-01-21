@@ -1,0 +1,15 @@
+#host
+192.168.56.20
+192.168.56.30
+
+
+# To disable host key cheking 
+# to enable host key cheking  use
+# ssh vagrant@192.168.56.20 
+# ssh vagrant@192.168.56.30
+# to fix the login issue sudo passwd ubuntu to new password vagrant
+#ansible all -i inventory -u vagrant -m ping -k
+#ansible 192.168.56.20 -i inventory -u vagrant -m ping -k
+
+
+

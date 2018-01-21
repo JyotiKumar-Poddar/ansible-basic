@@ -1,0 +1,8 @@
+---
+#this is our user
+
+username: all_username
+
+#ansible webservers -i inventory_prod.yml -m user -a "name={{username}} password=123456"  --sudo
+
+#[DEPRECATION WARNING]: The sudo command line option has been deprecated in favor of the "become" command line arguments. This feature will be removed in version 2.6. Deprecation warnings can  be disabled by setting deprecation_warnings=False in ansible.cfg.
